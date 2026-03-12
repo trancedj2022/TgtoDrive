@@ -1,4 +1,4 @@
-# 🎬 TgtoDrive (TTD) | 网盘资源自动化管理助手
+# 🎬 TgtoDrive (TTD) | 网盘资源自动化管理助手（原名Tgto123）
 
 <p align="center">
   <a href="https://hub.docker.com/r/walkingd/tgto123">
