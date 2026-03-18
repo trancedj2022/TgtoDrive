@@ -138,28 +138,12 @@ services:
       # 必填：WEB管理页面的登录账号密码
       - ENV_WEB_PASSPORT=admin
       - ENV_WEB_PASSWORD=password
-
-      # --- Telegram配置 ---
-      # 必填：从 @BotFather 获取
-      - ENV_TG_BOT_TOKEN=your_bot_token
-      # 必填：从 @userinfobot 获取管理员ID
-      - ENV_TG_ADMIN_USER_ID=123456789
-
-      # --- 网络代理配置 (可选) ---
-      # 注意：国外VPS无需填代理！国外VPS无需填代理！国外VPS无需填代理！
-      # 若本机已开启全局透明代理，则无需配置以下三项
-      # Clash用户通常填 http://127.0.0.1:7890
-      - HTTP_PROXY=http://127.0.0.1:7890
-      - HTTPS_PROXY=http://127.0.0.1:7890
-      - NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,123pan.com,115.com,189.cn,quark.cn
-
     volumes:
       # 数据库与日志持久化
       - ./db:/app/db
       # [推荐] B站、抖音等视频下载保存路径
       - ./downloads:/app/downloads
-      # [可选] PT下载目录映射：左侧填NAS本地路径，右侧固定为 /app/upload
-      # 用于实现本地文件秒传到网盘，不需要可去掉
+      # [可选] PT下载目录映射：左侧填NAS本地路径，右侧固定为 /app/upload，用于实现本地文件秒传到网盘，不需要可去掉
       - /vol3/1000/Video/MoviePilot/transfer:/app/upload
       # STRM输出目录：用于保存 /app/strm 下生成内容,/vol1/1000/Emby/strm 改成你的目录
       - /vol1/1000/Emby/strm:/app/strm
